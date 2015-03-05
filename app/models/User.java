@@ -122,9 +122,10 @@ public class User extends Model {
 	 * @param password
 	 * @param email
 	 */
-	public static void createAdmin(String username, String password, String email, boolean isAdmin) {
+	public static User createAdmin(String username, String password, String email, boolean isAdmin) {
 		User admin = new User(username, password, email, isAdmin);
 		admin.save();
+		return admin;
 	}
 	
 	// Finders
